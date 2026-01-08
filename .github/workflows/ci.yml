@@ -69,7 +69,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install pdoc
           rm -rf docs/reference
-          python -m pdoc --html app --output-dir docs/reference --force
+          python -m pdoc app -o docs/reference
+
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
